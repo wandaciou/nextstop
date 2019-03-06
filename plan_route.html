@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>nextstop</title>
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    
+    
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    
+    <link href="css/all.css" rel="stylesheet" type="text/css" />
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default nt-nav" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/web-logo.png" alt=""></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href="about.html">探索</a>
+                    </li>
+                    <li>
+                        <a href="about.html">行程</a>
+                    </li>
+                    <li>
+                        <a href="about.html">體驗</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right hidden-xs" role="search">
+                    <button type="button" onclick="location.href='login.html'" class="btn btn-primary-ghost btn-round">登入</button>
+                    <button type="button" onclick="location.href='signup.html'" class="btn btn-primary btn-round ">註冊</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">             
+                    <li>
+                        <select class="selectpicker selector-ln" >
+                            <option value="">中文（繁）</option>
+                            <option value="">English</option>
+                            <option value="">日本語</option>
+                            <option value="">한국어</option>
+                        </select>
+                    </li>
+                     <li>
+                        <select class="selectpicker selector-currency" >
+                            <option value="">TWD</option>
+                            <option value="">US$</option>
+                            <option value="">¥</option>
+                            <option value="">KRW</option>
+                        </select>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="login.html" class="btn-link-primary">登入</a>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="signup.html" class="btn-link-primary">註冊</a>
+                    </li>
+                </ul>
+                
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header Carousel -->
+    <header class="plan_banner" style="background-image: url(http://www.lifetour.com.tw/eWeb_lifetour/IMGDB/001333/001336/001360/00034237.JPG)">
+        <div class="black-image-mask">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>經典冬季北陸之旅</h2>
+                    <p>名古屋市,  高山市, 岐阜縣, 富山縣, 松本市, 日本</p>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker6'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--searchbar-->
+    <div class="plan_menu" data-spy="affix" data-offset-top="380" >
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-7 col-sm-6">
+                    <ul class="nav nav-ntabs">
+                        <li role="presentation" class="active"><a href="#">行程</a></li>
+                        <li role="presentation"><a href="#">地圖</a></li>
+                        <li role="presentation"><a href="#">遊記</a></li>
+                        <li role="presentation"><a href="#">相簿</a></li>
+                        <li class="pull-right">
+                            <select class="selectpicker" onchange="location = this.value;" data-width="80px">
+                                    <option value="#d1">Day1</option>
+                                    <option value="#d2">Day2</option>
+                                    <option value="#d3">Day3</option>
+                            </select>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-md-5 col-sm-6 hidden-xs">
+                    <div class="plan_route_toolpanel">
+                    <ul class="nav nav-tabs toolpanel-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#search_stops" aria-controls="home" role="tab" data-toggle="tab"><i class="material-icons">add_location</i> 搜尋景點</a></li>
+                        <li role="presentation"><a href="#messasge_board" aria-controls="profile" role="tab" data-toggle="tab"><i class="material-icons">message</i> 留言板</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content border-card search_stops_content">
+                        <!--places-->
+                        <div role="tabpanel" class="tab-pane active" id="search_stops">
+                            
+                                <div class="search_stops_selector">
+                                    
+                                    <select class="selectpicker form-control" data-live-search="true">
+                                        <option>名古屋</option>
+                                        <option>大阪</option>
+                                        <option>關西</option>
+                                    </select>
+                                    
+                                </div>
+                                <div class="spots_content">
+
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-ntabs tab-s spots-nav" role="tablist">
+                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">景點</a></li>
+                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">餐廳</a></li>
+                                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">飯店</a></li>
+                                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">收藏</a></li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content scroll-content">
+                                        <div role="tabpanel" class="tab-pane active" id="home">
+                                            <a class="media spot-list">
+                                                <div class="media-left">
+                                                    <img class="media-object"  src="images/pic90x60.png" alt="...">  
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h5 class="media-heading">名古屋港水族館</h5>
+                                                    <div class="rating-stars">
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star_half</i>
+                                                            <i class="material-icons g-star">star_border</i>
+                                                            <span class="disc_font">50 篇評論</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="media spot-list">
+                                                <div class="media-left">
+                                                    <img class="media-object"  src="images/pic90x60.png" alt="...">  
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h5 class="media-heading">名古屋港水族館</h5>
+                                                    <div class="rating-stars">
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star_half</i>
+                                                            <i class="material-icons g-star">star_border</i>
+                                                            <span class="disc_font">50 篇評論</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="media spot-list">
+                                                <div class="media-left">
+                                                    <img class="media-object"  src="images/pic90x60.png" alt="...">  
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h5 class="media-heading">名古屋港水族館</h5>
+                                                    <div class="rating-stars">
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star_half</i>
+                                                            <i class="material-icons g-star">star_border</i>
+                                                            <span class="disc_font">50 篇評論</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="media spot-list">
+                                                <div class="media-left">
+                                                    <img class="media-object"  src="images/pic90x60.png" alt="...">  
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h5 class="media-heading">名古屋港水族館</h5>
+                                                    <div class="rating-stars">
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star_half</i>
+                                                            <i class="material-icons g-star">star_border</i>
+                                                            <span class="disc_font">50 篇評論</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="media spot-list">
+                                                <div class="media-left">
+                                                    <img class="media-object"  src="images/pic90x60.png" alt="...">  
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h5 class="media-heading">名古屋港水族館</h5>
+                                                    <div class="rating-stars">
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star_half</i>
+                                                            <i class="material-icons g-star">star_border</i>
+                                                            <span class="disc_font">50 篇評論</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="media spot-list">
+                                                <div class="media-left">
+                                                    <img class="media-object"  src="images/pic90x60.png" alt="...">  
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h5 class="media-heading">名古屋港水族館</h5>
+                                                    <div class="rating-stars">
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star_half</i>
+                                                            <i class="material-icons g-star">star_border</i>
+                                                            <span class="disc_font">50 篇評論</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="media spot-list">
+                                                <div class="media-left">
+                                                    <img class="media-object"  src="images/pic90x60.png" alt="...">  
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h5 class="media-heading">名古屋港水族館</h5>
+                                                    <div class="rating-stars">
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star_half</i>
+                                                            <i class="material-icons g-star">star_border</i>
+                                                            <span class="disc_font">50 篇評論</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="media spot-list">
+                                                <div class="media-left">
+                                                    <img class="media-object"  src="images/pic90x60.png" alt="...">  
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h5 class="media-heading">名古屋港水族館</h5>
+                                                    <div class="rating-stars">
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star_half</i>
+                                                            <i class="material-icons g-star">star_border</i>
+                                                            <span class="disc_font">50 篇評論</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="media spot-list">
+                                                <div class="media-left">
+                                                    <img class="media-object"  src="images/pic90x60.png" alt="...">  
+                                                </div>
+                                                <div class="media-body ">
+                                                    <h5 class="media-heading">名古屋港水族館</h5>
+                                                    <div class="rating-stars">
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star</i>
+                                                            <i class="material-icons y-star">star_half</i>
+                                                            <i class="material-icons g-star">star_border</i>
+                                                            <span class="disc_font">50 篇評論</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="profile">2</div>
+                                        <div role="tabpanel" class="tab-pane" id="messages">3</div>
+                                        <div role="tabpanel" class="tab-pane" id="settings">4</div>
+                                    </div>
+
+                                </div>
+                           
+
+                           
+
+                        </div>
+                        <!--message-->
+                        <div role="tabpanel" class="tab-pane " id="messasge_board">
+                            <div class="scroll-content">
+                                <div class="message_list">
+                                    <div class="avatar" style="background-image: url(images/avatar.png)"></div>
+                                    <div class="avatar-profile">
+                                        <div><strong>Wilson</strong> 11:00 April 01, 2016</div>
+                                        <p class="fo-cl-3 mrg0">請問Superhotel 本町24號口，有幫忙收網購商品的服務嗎？要加價嗎？</p>
+                                    </div>
+                                </div>
+                                <div class="message_list">
+                                    <div class="avatar" style="background-image: url(images/avatar.png)"></div>
+                                    <div class="avatar-profile">
+                                        <div><strong>Wilson</strong> 11:00 April 01, 2016</div>
+                                        <p class="fo-cl-3 mrg0">請問Superhotel 本町24號口，有幫忙收網購商品的服務嗎？要加價嗎？</p>
+                                    </div>
+                                </div>
+                                <div class="message_list">
+                                    <div class="avatar" style="background-image: url(images/avatar.png)"></div>
+                                    <div class="avatar-profile">
+                                        <div><strong>Wilson</strong> 11:00 April 01, 2016</div>
+                                        <p class="fo-cl-3 mrg0">請問Superhotel 本町24號口，有幫忙收網購商品的服務嗎？要加價嗎？</p>
+                                    </div>
+                                </div>
+                                <div class="message_list">
+                                    <div class="avatar" style="background-image: url(images/avatar.png)"></div>
+                                    <div class="avatar-profile">
+                                        <div><strong>Wilson</strong> 11:00 April 01, 2016</div>
+                                        <p class="fo-cl-3 mrg0">請問Superhotel 本町24號口，有幫忙收網購商品的服務嗎？要加價嗎？</p>
+                                    </div>
+                                </div>
+                                <div class="message_list">
+                                    <div class="avatar" style="background-image: url(images/avatar.png)"></div>
+                                    <div class="avatar-profile">
+                                        <div><strong>Wilson</strong> 11:00 April 01, 2016</div>
+                                        <p class="fo-cl-3 mrg0">請問Superhotel 本町24號口，有幫忙收網購商品的服務嗎？要加價嗎？</p>
+                                    </div>
+                                </div>
+                                <div class="message_list">
+                                    <div class="avatar" style="background-image: url(images/avatar.png)"></div>
+                                    <div class="avatar-profile">
+                                        <div><strong>Wilson</strong> 11:00 April 01, 2016</div>
+                                        <p class="fo-cl-3 mrg0">請問Superhotel 本町24號口，有幫忙收網購商品的服務嗎？要加價嗎？</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row gutter-10">
+            
+            <!--plans-->
+            <div class="col-md-7 col-sm-6 col-xs-12">
+                <!--plan card-->
+                <div class="plan_route_day border-card">
+                    <div class="plan_route_day_title">
+                        <div class="plan_route_day_date"><strong>D1</strong></div>
+                        <div class="plan_route_day_cell">
+                            <h4>名古屋 > 高山 > 富山</h4>
+                            <div class="disc_font">9月28日 │ 出發時間 PM 9:00 │ 本日支出 $ 12,100</div>
+                        </div>
+                    </div>
+                    <!--spot-list-->
+                    <div class="media plan_route_list">
+                        <a class="add_list_btn_green"><i class="material-icons add_btn">airplanemode_active</i><span>搜尋航班</span><span class="disc_font">還沒安排機票？</span></a>
+                    </div>
+                    <!--transportation-->
+                    <div class="plan_route_path">
+                        
+                    </div>
+                    <!--spot-list-->
+                     <div class="media plan_route_list">
+                        <a class="add_list_btn_blue" id="add_places" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="material-icons add_btn">add</i><span>添加下個地點</span><span class="disc_font">景點推薦</span></a>
+                        <div class="add_places_box">
+                            <div class="scoll_wrap">
+                                <span class="item_places">
+                                    <p>日本中部國際機場</p>
+                                    <img class="media-object" src="images/pic90x60.png" alt="...">
+                                </span>
+                                <span class="item_places">
+                                    <p>日本中部國際機場</p>
+                                    <img class="media-object" src="images/pic90x60.png" alt="...">
+                                </span>
+                                <span class="item_places">
+                                    <p>日本中部國際機場</p>
+                                    <img class="media-object" src="images/pic90x60.png" alt="...">
+                                </span>
+                                <span class="item_places">
+                                    <p>日本中部國際機場</p>
+                                    <img class="media-object" src="images/pic90x60.png" alt="...">
+                                </span>
+                                <span class="item_places">
+                                    <p>日本中部國際機場</p>
+                                    <img class="media-object" src="images/pic90x60.png" alt="...">
+                                </span>
+                                <span class="item_places">
+                                    <p>日本中部國際機場</p>
+                                    <img class="media-object" src="images/pic90x60.png" alt="...">
+                                </span>
+                                <span class="item_places">
+                                    <p>日本中部國際機場</p>
+                                    <img class="media-object" src="images/pic90x60.png" alt="...">
+                                </span>
+                                <span class="item_places">
+                                    <p>日本中部國際機場</p>
+                                    <img class="media-object" src="images/pic90x60.png" alt="...">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+
+                <!--plan card-->
+                <div class="plan_route_day border-card" id="d2">
+                    <div class="plan_route_day_title">
+                        <div class="plan_route_day_date"><strong>D2</strong></div>
+                        <div class="plan_route_day_cell">
+                            <h4>名古屋 > 高山 > 富山</h4>
+                            <div class="disc_font">9月28日 │ 出發時間 PM 9:00 │ 本日支出 $ 12,100</div>
+                        </div>
+                    </div>
+                    <!--spot-list-->
+                    <div class="media plan_route_list">
+                        <!-- Single button -->
+                        <div class="btn-group list_item_more">
+                            <button type="button" class="btn dropdown-toggle list_item_more_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="material-icons">more_horiz</i>
+                            </button>
+                            <ul class="dropdown-menu list_item_more_dropdown">
+                                <li><a href="#">編輯</a></li>
+                                <li><a href="#">刪除</a></li>
+                            </ul>
+                        </div>
+                        <div class="list_item_no">1</div>
+                        <div class="media-left">
+                            <a href="#">
+                            <img class="media-object" src="images/pic90x60.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">名古屋車站</h4>
+                            <div class="disc_font"><span>30分鐘</span>│<span>$1200</span></div>
+                            <div class="disc_font">先去換JR車票，預計搭8:50，早餐在車站買</div>
+                        </div>
+                    </div>
+                    <!--transportation-->
+                    <div class="plan_route_path">
+                        <span class="plan_route_transport"><i class="material-icons">directions_car</i> <span class="trans-time">2小時1分</span></span>
+                        <span class="plan_route_transport"><i class="material-icons">train</i> <span class="trans-time">2小時51分</span></span>
+                    </div>
+                    <!--spot-list-->
+                     <div class="media plan_route_list">
+                         <!-- Single button -->
+                         <div class="btn-group list_item_more">
+                            <button type="button" class="btn dropdown-toggle list_item_more_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="material-icons">more_horiz</i>
+                            </button>
+                            <ul class="dropdown-menu list_item_more_dropdown">
+                                <li><a href="#">編輯</a></li>
+                                <li><a href="#">刪除</a></li>
+                            </ul>
+                        </div>
+                        <div class="list_item_no">2</div>
+                        <div class="media-left">
+                            <a href="#">
+                            <img class="media-object" src="images/pic90x60.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">高山車站</h4>
+                            <div class="disc_font"><span>30分鐘</span>│<span>$1200</span></div>
+                            <div class="disc_font">先去換JR車票，預計搭8:50，早餐在車站買</div>
+                        </div>
+                    </div>
+                     <!--transportation-->
+                    <div class="plan_route_path">
+                        <span class="plan_route_transport"><i class="material-icons">directions_walk</i> <span class="trans-time">15分</span></span>
+                        <span class="plan_route_transport"><i class="material-icons">directions_car</i> <span class="trans-time">3分</span></span>
+                    </div>
+                    <!--spot-list-->
+                     <div class="media plan_route_list">
+                        <a class="add_list_btn_blue" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="material-icons add_btn">add</i><span>添加下個地點</span><span class="disc_font">景點推薦</span></a>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+                <!-- Large modal -->
+                <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>-->
+
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-md" role="document">
+                    <div class="modal-content">
+                        <!--modal-add-places-->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">增加景點</h4>
+                        </div>
+                        <div class="add_places_modal_box modal-body">
+                           
+                                <div class="row">
+                                   
+                                    <div class='col-xs-12'>
+                                        
+                                        <form action="">
+                                           <div class="form-group">
+                                               <label for="">地點</label>
+                                                
+                                                    <input type="text" class="form-control" placeholder="輸入地點" name="q">
+                                                    <!--<div class="input-group-btn">
+                                                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </div>-->
+                                                <div class="search_suggestions">
+                                                    <button class="media spot-list btn btn-sug" type="button" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                                        <div class="media-left">
+                                                            <img class="media-object" src="images/pic90x60.png" alt="...">  
+                                                        </div>
+                                                        <div class="media-body ">
+                                                            <h5 class="media-heading">名古屋港水族館</h5>
+                                                            <div class="rating-stars">
+                                                                    <i class="material-icons y-star">star</i>
+                                                                    <i class="material-icons y-star">star</i>
+                                                                    <i class="material-icons y-star">star</i>
+                                                                    <i class="material-icons y-star">star_half</i>
+                                                                    <i class="material-icons g-star">star_border</i>
+                                                                    <span class="disc_font">50 篇評論</span>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                
+                                           </div>
+                                            <div class="form-group">
+                                                <label for="">停留時間</label>
+                                                <div>
+                                                    <select class="selectpicker" title="時" data-width="calc(50% - 2px)">
+                                                        <option value="">1時</option>
+                                                        <option value="">2時</option>
+                                                        <option value="">3時</option>
+                                                        <option value="">4時</option>
+                                                        <option value="">5時</option>
+                                                        <option value="">6時</option>
+                                                        <option value="">7時</option>
+                                                        <option value="">8時</option>
+                                                        <option value="">9時</option>
+                                                        <option value="">10時</option>
+                                                        <option value="">11時</option>
+                                                        <option value="">12時</option>
+                                                    </select>
+                                                    <select class="selectpicker" title="分" data-width="calc(50% - 2px)">
+                                                                <option value="">15分</option>
+                                                                <option value="">30分</option>
+                                                                <option value="">45分</option>
+                                                    </select>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">費用</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-btn" style="height: 34px">   
+                                                        <select class="selectpicker" data-width="auto">
+                                                                <option value="">NT$</option>
+                                                                <option value="">$</option>
+                                                                <option value="">¥</option>
+                                                                <option value="">₩</option>
+                                                        </select>
+                                                    </div><!-- /btn-group -->
+                                                    <input type="text" class="form-control" aria-label="...">
+                                                </div><!-- /input-group -->
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">備註</label>
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                            <!--<div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-fullwidth">送出</button>
+                                            </div>-->
+                                         </form>
+                                        
+                                      
+                                    </div>
+                                   
+                                </div>
+                           
+                           
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-fullwidth">送出</button>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+        
+
+        <!-- Footer -->
+        
+
+    </div>
+    <!-- /.container -->
+    <footer>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <select class="selectpicker footer-select" >
+                                <option value="">中文（繁）</option>
+                                <option value="">English</option>
+                                <option value="">日本語</option>
+                                <option value="">한국어</option>
+                            </select>
+                            
+                            <select class="selectpicker footer-select" >
+                                <option value="">TWD</option>
+                                <option value="">US$</option>
+                                <option value="">¥</option>
+                                <option value="">KRW</option>
+                            </select>
+                            
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-9">
+                            <ul class="footer-menu-warp clearfix">
+                                <li class="footer-menu-item"><a href="">關於我們</a></li>
+                                <li class="footer-menu-item"><a href="">聯絡我們</a></li>
+                                <li class="footer-menu-item"><a href="">求助</a></li>
+                                <li class="footer-menu-item"><a href="">服務條款</a></li>
+                                <li class="footer-menu-item"><a href="">隱私權政策</a></li>
+                            </ul>
+                            <p class="copyright">Copyright &copy; Your Website 2014</p>
+                        </div>
+                    </div>
+                </div>
+                 
+            </div>
+           
+        </footer>
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- selector JavaScript -->
+    <script type="text/javascript" src="js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+
+    
+    
+   
+    <script type="text/javascript">
+
+        $(function () {
+            $('#datetimepicker3').datetimepicker({
+                format: 'LT'
+            });
+        });
+                                    
+        
+        // $(function () {
+        //         $('#datetimepicker7').datetimepicker({
+        //             format: 'LT'
+        //         });
+        // });
+        $(function () {
+            $('#datetimepicker6').datetimepicker({
+                viewMode: 'days',
+                format: 'DD/MM/YYYY'
+                
+            });
+            $('#datetimepicker7').datetimepicker({
+                useCurrent: false, //Important! See issue #1075
+                viewMode: 'days',
+                format: 'DD/MM/YYYY'
+            });
+            $("#datetimepicker6").on("dp.change", function (e) {
+                $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datetimepicker7").on("dp.change", function (e) {
+                $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+    </script>
+</body>
+
+</html>
